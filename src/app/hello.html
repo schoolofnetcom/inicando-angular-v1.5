@@ -1,0 +1,58 @@
+<h1>{{ $ctrl.hero }}</h1>
+
+<form data-ng-submit="$ctrl.add($ctrl.form)">
+  <input type="text" data-ng-model="$ctrl.form.name" placeholder="Name">
+  <input type="tel" data-ng-model="$ctrl.form.telephone" placeholder="Telephone">
+  <input type="email" data-ng-model="$ctrl.form.email" placeholder="Email">
+
+  <button type="submit">Create a new contact</button>
+</form>
+
+
+<h1> {{ $ctrl.heroList }}</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Telephone</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="item in $ctrl.list">
+      <td data-ng-bind="item.name"></td>
+      <td data-ng-bind="item.telephone"></td>
+      <td data-ng-bind="item.email"></td>
+      <td>
+        <button type="button" data-ng-click="$ctrl.edit(item, $index)">Edit</button>
+        <button type="button" data-ng-click="$ctrl.remove(item)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- <input type="text" data-ng-model="$ctrl.person.name">
+<input type="text" data-ng-model="$ctrl.person.lastname">
+
+<input type="number" data-ng-model="num1">
+<input type="number" data-ng-model="num2">
+
+<input type="submit" data-ng-click="$ctrl.sum(num1, num2)" value="SUM">
+<input type="submit" data-ng-click="$ctrl.sub(num1, num2)" value="SUB">
+
+{{ $ctrl.person.name }}
+{{ $ctrl.person.lastname }}
+
+<ul>
+  <li data-ng-repeat="item in $ctrl.list">
+    <p>{{item.name}}</p>
+    <p data-ng-bind="item.lastname"></p>
+  </li>
+</ul>
+
+<app-directive name="Leonan" lastname="Luppi"></app-directive>
+<div app-directive></div>
+
+<hero></hero>
+ -->
